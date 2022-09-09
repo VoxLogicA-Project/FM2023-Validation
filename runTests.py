@@ -41,7 +41,10 @@ def run(obj,print_output=False):
     print(f'''label: {obj["label"]}''')
     print(f'''command: {' '.join(map(str,obj["args"]))}''')
     start = time.perf_counter()
-    result = subprocess.run(obj["args"],capture_output=True,text=True)    
+    my_env = os.environ.copy()
+    my_env["LD_LIBRARY_PATH"] = "./tools/mCRL2" 
+    print(my_env["LD_LIBRARY_PATH"])
+    result = subprocess.run(obj["args"],capture_output=True,text=True,env=my_env)    
     if result.returncode != 0:
         print(result.stdout)
         print(result.stderr)

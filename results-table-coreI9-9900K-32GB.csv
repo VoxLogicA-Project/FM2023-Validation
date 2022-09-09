@@ -1,0 +1,3 @@
+label,conversion,convWIO,pixels,transitions,autSizeH,min_computation,minWIO,statesMin,transitionsMin,convertBack,modelCheckingFull,modelCheckingMin,speedupMC
+maze-128,0.37,0.34,16.00 K,142.50 K,2.47 MiB,0.01,0.04,7,21,0.33,0.98,0.41,2.38
+mono-130,0.32,0.39,30.47 K,272.05 K,4.83 MiB,0.01,0.08,155,899,0.30,0.53,0.44,1.19

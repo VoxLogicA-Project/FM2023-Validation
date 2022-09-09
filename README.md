@@ -20,6 +20,8 @@ after which the python prerequisites can be installed using
 
     pip3 install pandas pillow
 
+## Results
+
 See the comments in runTests.py to see what the tests are doing. 
 
 The results are the files "rawdata.csv" (raw data from experiments) and "results-table.csv" (table massaged to be included in latex; note that the labels are not exactly the same as those in the paper but they should be clear nevertheless.).
