@@ -20,7 +20,6 @@ COPY tools ./tools
 COPY test-images ./test-images
 RUN chown MinimizeImages . -R
 
-ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:tools/mCRL2
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 
 USER MinimizeImages
