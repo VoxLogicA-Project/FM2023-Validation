@@ -1,32 +1,60 @@
 # Experimental validation of FM2022 submission: "Minimisation of Spatial Models using Branching Bisimilarity"
 
-All rights reserved on any file in this archive. Due to double blind submission, proper attribution cannot be made explicit here. Licensing matters will be cleaned up before publication.
+## COPYRIGHT
 
-Tested on linux only (this will be fixed before publication), ubuntu-20.04 and ubuntu-21.10. 
+All rights reserved on any file in this archive. Due to double blind submission,
+proper attribution cannot be made explicit here. Licensing matters will be
+cleaned up before publication.
 
-NOTE: this does NOT work on ubuntu-22.04 because both GraphLogicA and VoxLogicA need to be recompiled against libssl3.
+## Disclaimer
 
-## Running the tests
+This archives only works on linux (this will be fixed before publication), and
+has been specifically tested on ubuntu-20.04 and ubuntu-21.10. 
 
-To run the tests, run the file runTests.py either directly, with the execute bit set, or via python3.
+Before publication we will consider making this archive portable to more
+operating systems (the tools that we use are multiplatform, it is just
+reproduction of the experiments that has been prepared on, and for, linux, also
+because of the Docker image used).
+
+NOTE: this archive does NOT yet work on ubuntu-22.04 because both GraphLogicA
+and VoxLogicA need to be recompiled against libssl3. Will be fixed soon.
 
 ## Prerequisites
 
-On ubuntu, one needs to install python3 and python3-pip
+It is very likely that you already have all the dependencies installed, just in
+case: on ubuntu, one needs to install python3 and python3-pip
 
     sudo apt install python3 python3-pip 
     
-after which the python prerequisites can be installed using 
+after which the python prerequisites pandas and pillow can be installed using 
 
     pip3 install pandas pillow
 
+## Running the tests
+
+To run the tests, run the file runTests.py either directly
+
+    ./runTests.py
+
+(requires the execute bit set, but it should already be so after unpacking), or
+via python3
+
+    python3 ./runTests.py
+
 ## Results
 
-See the comments in runTests.py to see what the tests are doing. 
+See the comments in runTests.py or the paper to see what the tests are doing. 
 
 The results are the files "rawdata.csv" (raw data from experiments) and "results-table.csv" (table massaged to be included in latex; note that the labels are not exactly the same as those in the paper but they should be clear nevertheless.).
 
-
 ## Dockerfile
 
-We also include a Dockerfile building against the ubuntu-20.04 image. Should you be unfamiliar with docker, but willing to use the images, you need docker installed and working, and then launch the two commands at the beginning of "Dockerfile".
+We also include a Dockerfile building against the ubuntu-20.04 image for
+long-term reproducibility. 
+
+Should you be unfamiliar with docker, but willing to use the images, you need
+docker installed and working, and then launch the two commands below
+
+    docker build --progress=plain .
+    docker run --rm $(docker build -q .)
+
