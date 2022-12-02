@@ -6,13 +6,6 @@
 # Authors: Vincenzo Ciancia, Jan Friso Groote, Diego Latella, Mieke Massink and Erik De Vink
 # FORMAL METHODS 2023 https://fm2023.isp.uni-luebeck.de/index.php/overall-program/#fmacceptedpapers
 
-# The code can be run as a notebook using visual studio code python notebook mode, by the special comments.
-# Actually the script has been exported from an ipynb source.
-
-# NOTE: this code is being distributed to reproduce the experiments, but it has not yet been optimized for readability/code review. This will be done before publication.
-
-# NOTE: all rights reserved on any file in this archive. Due to double blind submission, proper attribution cannot be made explicit here. Licensing matters will be cleaned up before publication.
-
 # %% Python setup
 import subprocess 
 import time
@@ -43,7 +36,7 @@ def run(obj,print_output=False):
     print(f'''command: {' '.join(map(str,obj["args"]))}''')
     start = time.perf_counter()
     my_env = os.environ.copy()
-    my_env["LD_LIBRARY_PATH"] = "./tools/mCRL2.202106" 
+    my_env["LD_LIBRARY_PATH"] = "./tools/mCRL2-202106" 
     result = subprocess.run(obj["args"],capture_output=True,text=True,env=my_env)    
     if result.returncode != 0:
         print(result.stdout)
