@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-# This code runs the experiments for the FM2022 submission
+# This code runs the experiments for the paper:
 # Title: Minimisation of Spatial Models using Branching Bisimilarity
-# double blinded submission
+# Authors: Vincenzo Ciancia, Jan Friso Groote, Diego Latella, Mieke Massink and Erik De Vink
+# FORMAL METHODS 2023 https://fm2023.isp.uni-luebeck.de/index.php/overall-program/#fmacceptedpapers
 
 # The code can be run as a notebook using visual studio code python notebook mode, by the special comments.
 # Actually the script has been exported from an ipynb source.
@@ -25,12 +26,12 @@ import resource
 from ast import literal_eval
 import math
 
-converter_exe_rel="./tools/GraphLogicA/GraphLogicA_0.5_linux-x64/GraphLogicA"
+converter_exe_rel="./tools/GraphLogicA_0.6_linux-x64/GraphLogicA"
 converter_exe = Path(converter_exe_rel).absolute().as_posix()
 graphlogica_exe = converter_exe
 #minimizer_exe = shutil.which("ltsconvert")
-minimizer_exe = "./tools/mCRL2/ltsconvert"
-voxlogica_exe = "./tools/VoxLogicA/VoxLogicA_1.0-experimental_linux-x64/VoxLogicA"
+minimizer_exe = "./tools/mCRL2-202106/ltsconvert"
+voxlogica_exe = "./tools/VoxLogicA_1.0-experimental_linux-x64/VoxLogicA"
 output="output"
 shutil.rmtree(output,ignore_errors=True)
 os.makedirs(output,exist_ok=True)
@@ -42,8 +43,7 @@ def run(obj,print_output=False):
     print(f'''command: {' '.join(map(str,obj["args"]))}''')
     start = time.perf_counter()
     my_env = os.environ.copy()
-    my_env["LD_LIBRARY_PATH"] = "./tools/mCRL2" 
-    print(my_env["LD_LIBRARY_PATH"])
+    my_env["LD_LIBRARY_PATH"] = "./tools/mCRL2.202106" 
     result = subprocess.run(obj["args"],capture_output=True,text=True,env=my_env)    
     if result.returncode != 0:
         print(result.stdout)
@@ -266,7 +266,6 @@ modelCheckerMin_df = mk_df(
     [run(modelChecker(graph(image),spec,True))
         for image in images if (spec:=findSpec(graph(image),True)) if spec],
     "modelCheckingMin")
-
 
 # %% Read automata statistics
 print("Gathering statistics ...")
