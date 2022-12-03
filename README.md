@@ -35,6 +35,8 @@ after which the python prerequisites pandas and pillow can be installed using
 
 ## Running the tests
 
+The test may take about 30 minutes to finish on an Intel Core-i9 machine from 2019. Ram usage is high (the test machine has 32gb).
+
 To run the tests, first unzip the file "tools.zip" so that you have a "tools" directory. Then run the file runTests.py either directly
 
     ./runTests.py
@@ -64,7 +66,7 @@ have docker installed and working. Then build the image, and run it, using the t
     docker build --progress=plain .
     docker run --rm $(docker build -q .)
 
-In order to save the results you may want to mount a volume in docker or run the file outside of docker, or transfer the results via ssh after running the experiments. 
+In order to save the results you may want to mount a volume in docker or run the file outside of docker, or transfer the results via ssh after running the experiments. Note that no output is printed while running (please get in touch if you are willing to contribute patches). You can monitor execution using standard linux tools such as "htop".
 
 # COPYRIGHT
 
