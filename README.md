@@ -1,3 +1,5 @@
+# Presentation
+
 ## Purpose
 
 This code runs the experimental validation for the paper:
@@ -7,6 +9,10 @@ Authors: Vincenzo Ciancia, Jan Friso Groote, Diego Latella, Mieke Massink and Er
 FORMAL METHODS 2023 
 
 See https://fm2023.isp.uni-luebeck.de
+
+This repository is a copy of the main branch at https://github.com/VoxLogicA-Project/Validation-FM2023, tag "zenodo-FM2023"
+
+# Usage
 
 ## Disclaimer
 
@@ -56,9 +62,9 @@ instance, using the two commands below.
     docker build --progress=plain .
     docker run --rm $(docker build -q .)
 
-## COPYRIGHT
+# COPYRIGHT
 
-### mCRL2 License:
+## mCRL2 License:
 
 Boost Software License - Version 1.0 - August 17th, 2003
 
@@ -84,7 +90,7 @@ FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
-### VoxLogicA/GraphLogicA license:
+## VoxLogicA/GraphLogicA license:
 
 Copyright 2018 Vincenzo Ciancia.
 
