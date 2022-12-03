@@ -10,7 +10,9 @@ FORMAL METHODS 2023
 
 See https://fm2023.isp.uni-luebeck.de
 
-This repository is a copy of the main branch at https://github.com/VoxLogicA-Project/Validation-FM2023, tag "zenodo-FM2023"
+This repository is obtained by using "git archive" of the main branch with tag "zenodo-FM2023" of the repository:
+
+https://github.com/VoxLogicA-Project/Validation-FM2023
 
 # Usage
 
