@@ -58,9 +58,8 @@ nevertheless.).
 We also include a Dockerfile building against the ubuntu-20.04 image for
 long-term reproducibility. 
 
-Should you be unfamiliar with docker, but willing to use the images, you need to
-have docker installed and working, then to build the image, then to run it, for
-instance, using the two commands below.
+Should you be unfamiliar with docker, but willing to use the images, first you need to
+have docker installed and working. Then build the image, and run it, using the two commands below.
 
     docker build --progress=plain .
     docker run --rm $(docker build -q .)
