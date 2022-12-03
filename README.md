@@ -3,6 +3,7 @@
 This code runs the experimental validation for the paper:
 
 Title: Minimisation of Spatial Models using Branching Bisimilarity
+
 Authors: Vincenzo Ciancia, Jan Friso Groote, Diego Latella, Mieke Massink and Erik P. de Vink
 FORMAL METHODS 2023 
 
