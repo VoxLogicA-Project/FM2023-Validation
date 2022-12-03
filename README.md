@@ -11,7 +11,7 @@ See https://fm2023.isp.uni-luebeck.de
 
 This repository is obtained by using "git archive" of the main branch with tag "zenodo-FM2023" of the repository:
 
-https://github.com/VoxLogicA-Project/SpatialMinimizationExperiments
+https://github.com/VoxLogicA-Project/FM2023-Validation
 
 Please visit the repository for updates.
 
@@ -35,7 +35,7 @@ after which the python prerequisites pandas and pillow can be installed using
 
 ## Running the tests
 
-To run the tests, run the file runTests.py either directly
+To run the tests, first unzip the file "tools.zip" so that you have a "tools" directory. Then run the file runTests.py either directly
 
     ./runTests.py
 
