@@ -64,6 +64,8 @@ have docker installed and working. Then build the image, and run it, using the t
     docker build --progress=plain .
     docker run --rm $(docker build -q .)
 
+In order to save the results you may want to mount a volume in docker or run the file outside of docker, or transfer the results via ssh after running the experiments. 
+
 # COPYRIGHT
 
 ## mCRL2 License:
