@@ -53,7 +53,7 @@ nevertheless.).
 
 ## Dockerfile
 
-We also include a Dockerfile building against the ubuntu-22.04 image for
+We also include a Dockerfile building against the ubuntu-20.04 image for
 long-term reproducibility. 
 
 Should you be unfamiliar with docker, but willing to use the images, you need to
