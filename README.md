@@ -11,7 +11,9 @@ See https://fm2023.isp.uni-luebeck.de
 
 This repository is obtained by using "git archive" of the main branch with tag "zenodo-FM2023" of the repository:
 
-https://github.com/VoxLogicA-Project/Validation-FM2023
+https://github.com/VoxLogicA-Project/SpatialMinimizationExperiments
+
+Please visit the repository for updates.
 
 # Usage
 
