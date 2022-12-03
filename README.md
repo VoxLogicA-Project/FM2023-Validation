@@ -1,7 +1,5 @@
 # Presentation
 
-## Purpose
-
 This code runs the experimental validation for the paper:
 
 Title: Minimisation of Spatial Models using Branching Bisimilarity
